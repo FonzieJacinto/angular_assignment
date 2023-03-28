@@ -9,8 +9,10 @@ import { MainService } from './services/main.service';
 export class AppComponent {
   constructor( private mainService: MainService) {}
 
+  search: any;
+
   public getLocationData() {
-    this.mainService.get('http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=c6694858137c179c803da39fe73dac29').subscribe((data: any) => {
+    this.mainService.get('http://api.openweathermap.org/geo/1.0/direct?q='+ this.search +'&limit=5&appid=c6694858137c179c803da39fe73dac29').subscribe((data: any) => {
       console.log(data);
     });
   }

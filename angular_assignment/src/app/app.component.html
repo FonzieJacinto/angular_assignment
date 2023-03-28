@@ -1,5 +1,7 @@
 <router-outlet></router-outlet>
 <div class="main-wrapper">
-  <input type="text" matinput placeholder="Search for location">
+  <input type="text" matinput placeholder="Search for location" [(ngModel)]="search">
   <button (click)="getLocationData()">Search Location</button>
+
+  
 </div>
