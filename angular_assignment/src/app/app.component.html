@@ -3,5 +3,7 @@
   <input type="text" matinput placeholder="Search for location" [(ngModel)]="search">
   <button (click)="getLocationData()">Search Location</button>
 
-  
+  <p *ngIf="weather && weather.main && weather.main.temp">Temp: {{weather.main.temp}}</p>
+  <p *ngIf="weather && weather.weather">Weather: {{weather.weather[0].main}}</p>
+  <p *ngIf="weather && weather.weather">Description: {{weather.weather[0].description}}</p>
 </div>
